@@ -16,15 +16,26 @@
 
 ## 📦 安装
 
-首先，确保全局安装了 `pnpm`：
+### 使用 `degit` 快速克隆模板
+
+`degit` 是一个方便的工具，可以克隆 Git 仓库，但不会包含仓库的历史记录。首先，确保你全局安装了 `degit`：
 
 ```bash
-npm install -g pnpm
+npm install -g degit
 ```
 
-然后，克隆仓库并安装依赖：
+然后，使用 `degit` 克隆 VStarter 模板：
 
 ```bash
+degit https://github.com/zzy-repo/VStarter.git my-new-project
+```
+
+- `my-new-project` 是你新项目的名称，可以根据需要更改。
+
+### 进入项目目录并安装依赖
+
+```bash
+cd my-new-project
 pnpm install
 ```
 
@@ -81,7 +92,6 @@ pnpm lint:fix
 │   ├── stores      # Pinia 状态管理
 │   ├── views       # 视图组件
 │   └── App.vue     # 主应用组件
-├── .eslintrc       # ESLint 配置
 ├── vite.config.js  # Vite 配置
 └── package.json    # 项目元数据和脚本
 ```
@@ -92,3 +102,5 @@ pnpm lint:fix
 - `pnpm build`: 构建生产环境应用。
 - `pnpm lint`: 运行 ESLint 检查。
 - `pnpm lint:fix`: 自动修复 ESLint 问题。
+
+---
